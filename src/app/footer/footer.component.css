@@ -1,0 +1,23 @@
+footer {
+  padding: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.text-center {
+  color: green;
+}
+
+img {
+  width: 50px;
+  margin-right: 8px;
+}
+
+h6 {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}

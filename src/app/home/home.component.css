@@ -1,0 +1,16 @@
+#bg {
+  background: url("../../assets/images/bg_home.jpg");
+  margin: 5px;
+}
+
+.wh {
+  color: white;
+}
+hr {
+  color: white;
+}
+
+.carousel-caption {
+  background: rgba(1, 1, 1, 0.5);
+  border-radius: 50px;
+}

@@ -1,0 +1,212 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container">
+    <img
+      class="navbar-brand"
+      src="../../assets/images/logo_img.png"
+      alt="logo"
+    />
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/users">Registered Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/feedback">Feedback</a>
+        </li>
+      </ul>
+    </div>
+
+    <button
+      class="btn btn-outline-success"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#myModalSignup"
+    >
+      Register Now!
+    </button>
+
+    <div class="modal modal-dark" id="myModalSignup">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Sign Up</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="container mt-3">
+              <form action="/src/app/home/home.component.html" method="post">
+                <div class="reg">
+                  <form #r="ngForm">
+                    <label>First Name:</label>
+                    <input
+                      type="text"
+                      placeholder="Firstname"
+                      name="firstName"
+                      [(ngModel)]="selectedUser.firstName"
+                    />
+                    <br />
+                    <label>Last Name:</label>
+                    <input
+                      type="text"
+                      placeholder="Lastname"
+                      name="LastName"
+                      [(ngModel)]="selectedUser.lastName"
+                    />
+                    <br />
+                    <label for="gender">Gender:</label>
+                    <div>
+                      <label for="male" class="radio-inline"
+                        ><input
+                          type="radio"
+                          name="gender"
+                          value="m"
+                          id="male"
+                          [(ngModel)]="selectedUser.gender"
+                        />Male</label
+                      >
+                      <label for="female" class="radio-inline"
+                        ><input
+                          type="radio"
+                          name="gender"
+                          value="f"
+                          id="female"
+                          [(ngModel)]="selectedUser.gender"
+                        />Female</label
+                      >
+                      <label for="others" class="radio-inline"
+                        ><input
+                          type="radio"
+                          name="gender"
+                          value="o"
+                          id="others"
+                          [(ngModel)]="selectedUser.gender"
+                        />Others</label
+                      >
+                    </div>
+                    <label>Email:</label>
+                    <input
+                      type="email"
+                      placeholder="first.last@gmail.com"
+                      name="email"
+                      [(ngModel)]="selectedUser.email"
+                    />
+                    <br />
+                    <label>Password:</label>
+                    <input
+                      type="password"
+                      placeholder="********"
+                      name="password"
+                      [(ngModel)]="selectedUser.password"
+                    />
+                    <br />
+                    <label>Phone:</label>
+                    <input
+                      type="number"
+                      placeholder="00/000000"
+                      name="phone"
+                      [(ngModel)]="selectedUser.number"
+                    />
+                    <br />
+                    <br />
+                    <input
+                      type="button"
+                      class="btn btn-outline-success"
+                      style="color: green; font-weight: bold"
+                      (click)="createUser(r)"
+                      value="Create User"
+                    />
+                  </form>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <p>Raffi's Bootcamp</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="btn btn-outline-success"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#myModalLogin"
+    >
+      Log In
+    </button>
+
+    <div class="modal modal-dark" id="myModalLogin">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Sign In</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="container mt-3">
+              <form action="/action_page.php" class="was-validated">
+                <div class="mb-3 mt-3">
+                  <label for="uname" class="form-label">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">Password:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="pwd"
+                    placeholder="Enter password"
+                    name="pswd"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-outline-success">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <p>Raffi's Bootcamp</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,118 @@
+<div id="bg">
+  <div class="title">
+    <h3>Registered Users</h3>
+    <!-- <br /> -->
+  </div>
+  <br />
+  <br />
+  <br />
+  <!-- <div class="reg">
+    <form #f="ngForm">
+      <label>First Name:</label>
+      <input
+        type="text"
+        placeholder="FName"
+        name="firstName"
+        [(ngModel)]="selectedUser.firstName"
+      />
+      <br />
+      <label>Last Name:</label>
+      <input
+        type="text"
+        placeholder="LName"
+        name="LastName"
+        [(ngModel)]="selectedUser.LastName"
+      />
+      <br />
+      <label for="gender">Gender:</label>
+      <div>
+        <label for="male" class="radio-inline"
+          ><input
+            type="radio"
+            name="gender"
+            value="m"
+            id="male"
+            [(ngModel)]="selectedUser.gender"
+          />Male</label
+        >
+        <label for="female" class="radio-inline"
+          ><input
+            type="radio"
+            name="gender"
+            value="f"
+            id="female"
+            [(ngModel)]="selectedUser.gender"
+          />Female</label
+        >
+        <label for="others" class="radio-inline"
+          ><input
+            type="radio"
+            name="gender"
+            value="o"
+            id="others"
+            [(ngModel)]="selectedUser.gender"
+          />Others</label
+        >
+      </div>
+      <label>Email:</label>
+      <input
+        type="email"
+        placeholder="first.last@gmail.com"
+        name="email"
+        [(ngModel)]="selectedUser.email"
+      />
+      <br />
+      <label>Password:</label>
+      <input
+        type="password"
+        placeholder="********"
+        name="password"
+        [(ngModel)]="selectedUser.password"
+      />
+      <br />
+      <label>Phone:</label>
+      <input
+        type="number"
+        placeholder="00/000000"
+        name="phone"
+        [(ngModel)]="selectedUser.number"
+      />
+      <br />
+      <br />
+      <input
+        type="button"
+        class="btn-primary"
+        (click)="createUser(f)"
+        value="Create User"
+      />
+    </form>
+  </div> -->
+  <br />
+  <div class="table">
+    <table class="table table-striped table-bordered table-success">
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <!-- <th>Action</th> -->
+      </tr>
+      <tr *ngFor="let u of users">
+        <td>{{ u.id }}</td>
+        <td>{{ u.firstName }}</td>
+        <td>{{ u.LastName }}</td>
+        <td>{{ u.gender }}</td>
+        <td>{{ u.email }}</td>
+        <td>{{ u.number }}</td>
+
+        <!-- <td>
+          <button class="btn btn-danger" (click)="deleteUser(u.id)">
+            Delete
+          </button>
+        </td> -->
+      </tr>
+    </table>
+  </div>
+</div>

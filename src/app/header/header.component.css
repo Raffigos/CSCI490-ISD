@@ -1,0 +1,27 @@
+.nav-item {
+  font-size: 25px;
+}
+
+.nav-link {
+  color: green;
+  font-weight: bold;
+}
+
+.nav-item :hover {
+  color: white;
+}
+
+button {
+  color: green;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.modal-content {
+  background-color: rgb(44, 41, 41);
+  color: white;
+}
+
+input {
+  margin: 6px;
+}

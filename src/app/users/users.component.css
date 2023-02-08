@@ -1,0 +1,32 @@
+#bg {
+  background-image: url("../../assets/images/bg_users.jpg");
+  margin: 11px;
+  background-position: 80% 80%;
+  background-size: cover;
+}
+
+.title {
+  color: green;
+  background-color: sblack;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+/* .reg {
+  background-color: rgba(121, 311, 100, 0.6);
+  display: inline-block;
+} */
+/* #del {
+  background-color: red;
+  color: white;
+  border-radius: 50px;
+} */
+
+/* #del :hover {
+  color: white;
+} */
+/* .btn-primary {
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 50px;
+} */
