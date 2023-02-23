@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
     gender: null,
     email: null,
     password: null,
+    course: null,
     number: null,
   };
   constructor(private dataService: DataService) {
@@ -34,6 +35,7 @@ export class HeaderComponent implements OnInit {
     form.value.gender = this.selectedUser.gender;
     form.value.email = this.selectedUser.email;
     form.value.password = this.selectedUser.password;
+    form.value.course = this.selectedUser.course;
     form.value.number = this.selectedUser.number;
     if (this.selectedUser && this.selectedUser.id) {
       this.dataService.readUser().subscribe((users: User[]) => {
@@ -47,22 +49,19 @@ export class HeaderComponent implements OnInit {
         });
       });
     }
+    alert('Registration Success!');
   }
 
   selectUser(user: User) {
     this.selectedUser = user;
   }
 
-  deleteUser(id: number) {
-    this.dataService.deleteUser(id).subscribe((user: User) => {
-      console.log('User deleted, ', user);
-      this.dataService.readUser().subscribe((users: User[]) => {
-        this.users = users;
-      });
-    });
-  }
-
-  registration() {
-    alert('Registration Success!');
-  }
+  // deleteUser(id: number) {
+  //   this.dataService.deleteUser(id).subscribe((user: User) => {
+  //     console.log('User deleted, ', user);
+  //     this.dataService.readUser().subscribe((users: User[]) => {
+  //       this.users = users;
+  //     });
+  //   });
+  // }
 }

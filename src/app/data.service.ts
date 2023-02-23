@@ -11,12 +11,6 @@ import { Feedback } from './feedback';
 export class DataService {
   prolangs = [
     {
-      image: 'basics.jpg',
-      title: 'HTML & CSS',
-      description:
-        'Hypertext Markup Language(HTML) creates the basic structure of your webpage and Cascading Style Sheets(CSS) adds the design you need to apply.',
-    },
-    {
       image: 'beginners.jpg',
       title: 'JavaScript & TypeScript',
       description:
@@ -41,26 +35,34 @@ export class DataService {
   readUser(): Observable<User[]> {
     return this.httpClient.get<User[]>(`${this.PHP_API_SERVER}/index.php`);
   }
+
+  readLogin(): Observable<User[]> {
+    return this.httpClient.get<User[]>(`${this.PHP_API_SERVER}/login.php`);
+  }
+
   readFeedback(): Observable<Feedback[]> {
     return this.httpClient.get<Feedback[]>(
       `${this.PHP_API_SERVER}/feedback.php`
     );
   }
+
   createUser(user: User): Observable<User> {
     return this.httpClient.post<User>(
       `${this.PHP_API_SERVER}/create_user.php`,
       user
     );
   }
+
   createFeedback(feedbacks: Feedback): Observable<Feedback> {
     return this.httpClient.post<Feedback>(
       `${this.PHP_API_SERVER}/create_feedback.php`,
       feedbacks
     );
   }
-  deleteUser(id: number) {
-    return this.httpClient.delete<User>(
-      `${this.PHP_API_SERVER}/delete_user.php/?id=${id}`
-    );
-  }
+
+  // deleteUser(id: number) {
+  //   return this.httpClient.delete<User>(
+  //     `${this.PHP_API_SERVER}/delete_user.php/?id=${id}`
+  //   );
+  // }
 }

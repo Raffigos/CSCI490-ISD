@@ -5,5 +5,6 @@ export class User {
   gender: string | any;
   email: string | any;
   password: string | any;
+  course: string | any;
   number: number | any;
 }

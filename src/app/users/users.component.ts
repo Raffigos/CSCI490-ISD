@@ -16,6 +16,7 @@ export class UsersComponent implements OnInit {
     gender: null,
     email: null,
     password: null,
+    course: null,
     number: null,
   };
   constructor(private dataService: DataService) {
@@ -53,12 +54,12 @@ export class UsersComponent implements OnInit {
     this.selectedUser = user;
   }
 
-  deleteUser(id: number) {
-    this.dataService.deleteUser(id).subscribe((user: User) => {
-      console.log('User deleted, ', user);
-      this.dataService.readUser().subscribe((users: User[]) => {
-        this.users = users;
-      });
-    });
-  }
+  // deleteUser(id: number) {
+  //   this.dataService.deleteUser(id).subscribe((user: User) => {
+  //     console.log('User deleted, ', user);
+  //     this.dataService.readUser().subscribe((users: User[]) => {
+  //       this.users = users;
+  //     });
+  //   });
+  // }
 }

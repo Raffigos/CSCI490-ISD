@@ -54,7 +54,7 @@
 
           <div class="modal-body">
             <div class="container mt-3">
-              <form action="/src/app/home/home.component.html" method="post">
+              <form action="" method="post">
                 <div class="reg">
                   <form #r="ngForm">
                     <label>First Name:</label>
@@ -97,10 +97,10 @@
                         ><input
                           type="radio"
                           name="gender"
-                          value="o"
-                          id="others"
+                          value="a"
+                          id="anonymous"
                           [(ngModel)]="selectedUser.gender"
-                        />Others</label
+                        />Anonymous</label
                       >
                     </div>
                     <label>Email:</label>
@@ -119,6 +119,45 @@
                       [(ngModel)]="selectedUser.password"
                     />
                     <br />
+                    <label for="course">Course:</label>
+                    <div>
+                      <label for="basic" class="radio-inline"
+                        ><input
+                          type="radio"
+                          name="course"
+                          value="basic"
+                          id="basic"
+                          [(ngModel)]="selectedUser.course"
+                        />Basic</label
+                      >
+                      <label for="beginner" class="radio-inline"
+                        ><input
+                          type="radio"
+                          name="course"
+                          value="beginner"
+                          id="beginner"
+                          [(ngModel)]="selectedUser.course"
+                        />Beginner</label
+                      >
+                      <label for="intermediate" class="radio-inline"
+                        ><input
+                          type="radio"
+                          name="course"
+                          value="intermediate"
+                          id="intermediate"
+                          [(ngModel)]="selectedUser.course"
+                        />Intermediate</label
+                      >
+                      <label for="advanced" class="radio-inline"
+                        ><input
+                          type="radio"
+                          name="course"
+                          value="advanced"
+                          id="advanced"
+                          [(ngModel)]="selectedUser.course"
+                        />Advanced</label
+                      >
+                    </div>
                     <label>Phone:</label>
                     <input
                       type="number"
@@ -126,7 +165,6 @@
                       name="phone"
                       [(ngModel)]="selectedUser.number"
                     />
-                    <br />
                     <br />
                     <input
                       type="button"
@@ -171,26 +209,26 @@
 
           <div class="modal-body">
             <div class="container mt-3">
-              <form action="/action_page.php" class="was-validated">
+              <form action="./login.php" class="was-validated">
                 <div class="mb-3 mt-3">
-                  <label for="uname" class="form-label">Email:</label>
+                  <label for="user" class="form-label">Email</label>
                   <input
                     type="email"
                     class="form-control"
                     id="email"
-                    placeholder="Enter email"
+                    placeholder="Enter Email"
                     name="email"
                     required
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="pwd" class="form-label">Password:</label>
+                  <label for="pass" class="form-label">Password:</label>
                   <input
                     type="password"
                     class="form-control"
-                    id="pwd"
+                    id="pass"
                     placeholder="Enter password"
-                    name="pswd"
+                    name="pass"
                     required
                   />
                 </div>
